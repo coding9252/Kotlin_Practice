@@ -1,4 +1,4 @@
-package com.android.basic_syntax
+package com.android.basic_class
 
 // [조건문, 반복문, 배열을 활용한 문제 5개 출제하기]
 
