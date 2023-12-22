@@ -21,28 +21,28 @@ package com.android.basic_class
 
 
 // ❓ 1~12월이 아닌 걸 입력하면 계속 입력하게 하기
-//fun main() {
-//    var month: Int
-//
-//    do {
-//        print("1부터 12까지의 숫자 중 하나를 입력해주세요: ")
-//        month = readLine()!!.toInt()
-//
-//        val season = when (month) {
-//            in 1..2, 12 -> "겨울"
-//            in 3..5 -> "봄"
-//            in 6..8 -> "여름"
-//            in 9..11 -> "가을"
-//            else -> {
-//                println("1부터 12까지의 유효한 숫자를 입력해주세요")
-//                continue
-//            }
-//        }
-//
-//        println("$season ")
-//        break // 올바른 입력이 있을 때 멈춥니다.
-//    } while (true)
-//}
+fun main() {
+    var month: Int
+
+    do {
+        print("1부터 12까지의 숫자 중 하나를 입력해주세요: ")
+        month = readLine()!!.toInt()
+
+        val season = when (month) {
+            in 1..2, 12 -> "겨울"
+            in 3..5 -> "봄"
+            in 6..8 -> "여름"
+            in 9..11 -> "가을"
+            else -> {
+                println("1부터 12까지의 유효한 숫자를 입력해주세요")
+                continue
+            }
+        }
+
+        println("$season ")
+        break // 올바른 입력이 있을 때 멈춥니다.
+    } while (true)
+}
 
 
 // ❓fun 만들기

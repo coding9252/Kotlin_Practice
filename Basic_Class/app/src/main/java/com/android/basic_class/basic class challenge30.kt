@@ -1,7 +1,7 @@
 package com.android.basic_class
 
 // [30] 정수 3개를 입력하고 가장 큰 수를 출력 (입력 : 20, 1000, 400 / 출력 : 1000)
-// 🐥❓왜 readLine()?.toInt() ?: 0 했는데 exception 오류?? -> 해결 : toInt()말고 toIntOrNull()를 썼어야 함!!
+// 🐥❗️왜 readLine()?.toInt() ?: 0 했는데 exception 오류?? -> 해결 : toInt()말고 toIntOrNull()를 썼어야 함!!
 //fun main() {
 //    println("3개의 정수를 입력해 주세요.")
 //    val num1 = readLine()?.toIntOrNull() ?:0
@@ -15,15 +15,15 @@ package com.android.basic_class
 
 
 // 💡
-//fun main() {
-//    println("세 개의 정수를 입력하세요: ")
-//    val num1 = readLine()!!.toInt()
-//    val num2 = readLine()!!.toInt()
-//    val num3 = readLine()!!.toInt()
-//
-//    val max = maxOf(num1, num2, num3)
-//    println("가장 큰 수는 $max 입니다.")
-//}
+fun main() {
+    println("세 개의 정수를 입력하세요: ")
+    val num1 = readLine()!!.toInt()
+    val num2 = readLine()!!.toInt()
+    val num3 = readLine()!!.toInt()
+
+    val max = maxOf(num1, num2, num3)
+    println("가장 큰 수는 $max 입니다.")
+}
 
 
 // 💡
