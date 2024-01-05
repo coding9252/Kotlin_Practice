@@ -4,18 +4,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.android.app_lv2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val btn = findViewById<Button>(R.id.myButton)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
 
-        btn.setOnClickListener {
-            val tv = findViewById<TextView>(R.id.myTextView)
+        setContentView(view)
 
-            tv.text = "버튼이 눌렸습니다."
+        binding.myButton.setOnClickListener{
+            binding.myTextView.text = "바인딩 완료!"
         }
     }
 }
