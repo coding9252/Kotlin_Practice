@@ -18,5 +18,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.myButton.setOnClickListener {
+            binding.myTextView.text = "바인딩 완료!"
+        }
     }
 }
