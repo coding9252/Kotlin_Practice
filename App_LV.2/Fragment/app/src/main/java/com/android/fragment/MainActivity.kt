@@ -2,11 +2,12 @@ package com.android.fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.android.fragment.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), FragmentDataListener {
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
@@ -25,8 +26,8 @@ class MainActivity : AppCompatActivity() {
             fragment2Btn.setOnClickListener {
                 // [1] Activity -> SecondFragment
                 val dataToSend = "Hello Second Fragment!\n From Activity"
-              //  val fragment = SecondFragment.newInstance(dataToSend)
-                //  setFragment(fragment)
+                val fragment = SecondFragment.newInstance(dataToSend)
+                setFragment(fragment)
             }
 
         }
@@ -39,5 +40,11 @@ class MainActivity : AppCompatActivity() {
             setReorderingAllowed(true)
             addToBackStack("")
         }
+    }
+
+    // [3] Fragment -> Activity
+    override fun onDataReceived(data: String) {
+        // Fragment에서 받은 데이터를 처리
+        Toast.makeText(this, data, Toast.LENGTH_SHORT).show()
     }
 }
