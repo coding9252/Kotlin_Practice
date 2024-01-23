@@ -35,4 +35,5 @@ class MainActivity : AppCompatActivity() {
         // 1번째 인자는 키, 2번째 인자는 데이터가 존재하지 않을 경우의 값(불러올 때는 defaultvalue를 지정해줘야 한다.)
         binding.etHello.setText(pref.getString("name", ""))
     }
+
 }
